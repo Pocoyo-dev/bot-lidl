@@ -41,4 +41,4 @@ client.on("message", async (msg) => {
   if (commandFile) commandFile.run(client, msg, args);
 });
 
-client.login(config.token);
+client.login(process.env.TOKEN);
