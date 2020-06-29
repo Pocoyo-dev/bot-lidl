@@ -2,6 +2,7 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 const fetch = require("node-fetch");
 const fs = require("fs");
+const config = require("./config.json")
 
 client.commands = new Discord.Collection();
 
@@ -29,7 +30,7 @@ const commandFiles = fs
   .filter((file) => file.endsWith(".js"));
 
 client.on("message", async (msg) => {
-  if (!msg.content.startsWith(;) || msg.author.bot) return;
+  if (!msg.content.startsWith(config.prefix) || msg.author.bot) return;
 
   let prefix = config.prefix;
   let messageArray = msg.content.split(" ");
