@@ -14,8 +14,7 @@ module.exports.run = async(client, msg, args) => {
 	const discordUser = msg.member.user.tag;
 
 	const data = {
-		// email: "TrkqfcYTzCkSzT4W5FLcFNnYsA42ckgIn5GNeoP8BORujj+PYUjRBrDl5ofOU/vh5KqSH+a1CbEkKcVc0SFQTN6SohKih/r4zlu4Vgh9XiheRMTMgLiD8NeUo6aAPu8V",
-		email: "tttt", 
+		email: "process.env.EMAIL", 
 		form: {
 			title: "[BOT LIDL] Mobirise Form",
 			data: [
