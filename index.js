@@ -2,7 +2,6 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 const fetch = require("node-fetch");
 const fs = require("fs");
-const config = require("./config.json");
 
 client.commands = new Discord.Collection();
 
