@@ -47,7 +47,7 @@ module.exports.run = async (client, msg, args) => {
 
   let commandDrive = `Vous avez commandé sous le nom de ${args[0]} ${args[2]} de ${args[1]}`
 
-  let pastCommand = commandlog[discordUser]
+  let pastCommand = commandLog[discordUser]
 
   if(commandLog[discordUser]) {
     commandLog[discordUser] = {
