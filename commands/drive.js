@@ -51,7 +51,7 @@ module.exports.run = async (client, msg, args) => {
 
   if(commandLog[discordUser]) {
     commandLog[discordUser] = {
-      commandes: pastCommand , commandDrive
+      commandes: `${pastCommand} ${commandDrive}`
     };
   }
 };
