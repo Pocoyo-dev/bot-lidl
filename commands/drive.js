@@ -6,7 +6,7 @@ module.exports.run = async (client, msg, args) => {
 
   if(!args[0]) msg.reply("Il vous faut tous les arguments pour passer une commande \:p")
 
-  const discordUser = message.author.display_name;
+  const discordUser = msg.author.display_name;
 
 
   const data = {
