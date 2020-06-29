@@ -1,13 +1,22 @@
 const Discord = require("discord.js");
 const fetch = require("node-fetch");
 const axios = require("axios");
+const fs = require("fs");
+const commandLog = require("../command-logs.json");
 
 module.exports.run = async (client, msg, args) => {
-
-  if(!args[0]) msg.reply("Il vous faut tous les arguments pour passer une commande \:p")
+  if (!args[0])
+    msg.reply(
+      "Syntaxe : `;drive (Pseudo en jeu) (Item commandé) (Quantité en stacks)`"
+    );
 
   const discordUser = msg.member.user.tag;
 
+  if(!commandLog[msg.member.user.tag]) {
+    commandLog[discordUser] = {
+      commandes: aucunes
+    };
+  }
 
   const data = {
     email:
@@ -32,9 +41,19 @@ module.exports.run = async (client, msg, args) => {
     })
     .catch((err) => {
       console.error(err);
-    })
+    });
 
   msg.reply("Merci d'avoir passé une commande avec Lidl Drive !");
+
+  let commandDrive = `Vous avez commandé sous le nom de ${args[0]} ${args[2]} de ${args[1]}`
+
+  let pastCommand = commandlog[discordUser]
+
+  if(commandLog[discordUser]) {
+    commandLog[discordUser] = {
+      commandes: pastCommand , commandDrive
+    };
+  }
 };
 
 module.exports.help = {
