@@ -14,7 +14,7 @@ module.exports.run = async (client, msg, args) => {
 
   if(!commandLog[msg.member.user.tag]) {
     commandLog[discordUser] = {
-      commandes: aucunes
+      commandes: 0
     };
   }
 
