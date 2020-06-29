@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const fetch = require("node-fetch");
 const axios = require("axios");
 const fs = require("fs");
-const commandLog = require("../command-logs.json");
+const commandLog = require("./command-logs.json");
 
 module.exports.run = async (client, msg, args) => {
   if (!args[0])
