@@ -44,7 +44,7 @@ module.exports.run = async(client, msg, args) => {
 
 	var fs = require("fs");
 	var sampleObject = {
-		`${discordUser}` : {
+		`${discordUser}`: {
 			name: `${args[0]}`,
 			item: `${args[1]}`,
 			quantity: `${args[2]}`
