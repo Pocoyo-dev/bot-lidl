@@ -12,6 +12,8 @@
     "axios": "^0.19.2",
     "discord.js": "^12.2.0",
     "fs": "0.0.1-security",
-    "node-fetch": "^2.6.0"
+    "googleapis": "^39.2.0",
+    "node-fetch": "^2.6.0",
+    "sheetsu-node": "0.0.7"
   }
 }
