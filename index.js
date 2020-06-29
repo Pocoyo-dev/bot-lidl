@@ -29,7 +29,7 @@ const commandFiles = fs
   .filter((file) => file.endsWith(".js"));
 
 client.on("message", async (msg) => {
-  if (!msg.content.startsWith(config.prefix) || msg.author.bot) return;
+  if (!msg.content.startsWith(;) || msg.author.bot) return;
 
   let prefix = config.prefix;
   let messageArray = msg.content.split(" ");
