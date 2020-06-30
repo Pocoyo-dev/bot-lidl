@@ -21,6 +21,8 @@ module.exports.run = async (client, msg, args) => {
       msgData2 = msgData2.replace("},{", ",");
       msgData2 = msgData2.replace("},{", ",");
 
+      const finalMessage = JSON.parse(msgData2);
+
       msg.reply(
         `Vous avez commandé **${finalMessage.QUANTITY}** de **${finalMessage.ITEM}** sous le pseudo **${finalMessage.PSEUDO}** le **${finalMessage.Horodateur}**`
       );
