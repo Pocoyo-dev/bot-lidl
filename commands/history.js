@@ -19,6 +19,7 @@ module.exports.run = async (client, msg, args) => {
       msgData2 = msgData2.replace("[", " ");
       msgData2 = msgData2.replace("]", " ");
       msgData2 = msgData2.replace("},{", ",");
+      msgData2 = msgData2.replace("},{", ",");
     
 
       const json = `${msgData2}`;
