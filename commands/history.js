@@ -7,34 +7,42 @@ const sheetClient = sheetsu({
   address: "https://sheetsu.com/apis/v1.0su/0600bbb58ade",
 });
 
-module.exports.run = async (client, msg, args) => {
+(module.exports.run = async (client, msg, args) => {
   const discordUser = msg.member.user.id;
 
-  sheetClient.read({ search: { DISCORD: discordUser } }).then(
-    function (data) {
-      console.log(data);
-      const dataMSG = data;
+  const log1Time = await fetch(
+    `https://google-form-to-json.herokuapp.com/api?id=1LGEDEHkI0WBgzxtG7UidGO-m-gn9qNIPQk4o0jOVhLk&q=${discordUser}`
+  )
+    .then((res) => res.json())
+    .then((json) => json.horodateur);
 
-      var msgData2 = `${dataMSG}`;
-      msgData2 = msgData2.replace("[", " ");
-      msgData2 = msgData2.replace("]", " ");
-      msgData2 = msgData2.replace("},{", ",");
-      msgData2 = msgData2.replace("},{", ",");
+  const log1Pseudo = await fetch(
+    `https://google-form-to-json.herokuapp.com/api?id=1LGEDEHkI0WBgzxtG7UidGO-m-gn9qNIPQk4o0jOVhLk&q=${discordUser}`
+  )
+    .then((res) => res.json())
+    .then((json) => json.pseudo);
 
-      const finalMessage = JSON.parse(msgData2);
+  const log1Quantity = await fetch(
+    `https://google-form-to-json.herokuapp.com/api?id=1LGEDEHkI0WBgzxtG7UidGO-m-gn9qNIPQk4o0jOVhLk&q=${discordUser}`
+  )
+    .then((res) => res.json())
+    .then((json) => json.quantité);
 
-      msg.reply(
-        `Vous avez commandé **${finalMessage.QUANTITY}** de **${finalMessage.ITEM}** sous le pseudo **${finalMessage.PSEUDO}** le **${finalMessage.Horodateur}**`
-      );
-    },
-    function (err) {
-      console.log(err);
-      msg.reply(
-        "Désolé mais un bug est survenu du côté du site ! Nous ne pouvons rien y faire, réessaie plus tard :("
-      );
-    }
+  const log1Item = await fetch(
+    `https://google-form-to-json.herokuapp.com/api?id=1LGEDEHkI0WBgzxtG7UidGO-m-gn9qNIPQk4o0jOVhLk&q=${discordUser}`
+  )
+    .then((res) => res.json())
+    .then((json) => json.pseudo);
+  msg.reply(
+    `Vous avez commandé **${log1Quantity}** de **${log1Item}** sous le pseudo **${log1Pseudo}** le **${log1Time}**`
   );
-};
+}),
+  function (err) {
+    console.log(err);
+    msg.reply(
+      "Désolé mais un bug est survenu du côté du site ! Nous ne pouvons rien y faire, réessaie plus tard :("
+    );
+  };
 
 module.exports.help = {
   name: "history",
