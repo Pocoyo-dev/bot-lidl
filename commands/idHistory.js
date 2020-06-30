@@ -10,7 +10,7 @@ const sheetClient = sheetsu({
 module.exports.run = async (client, msg, args) => {
   const discordUserID = args[0];
 
-  sheetClient.read({ search: { DISCORD: discordUser } }).then(
+  sheetClient.read({ search: { DISCORD: discordUserID } }).then(
     function (data) {
       console.log(data);
       const dataMSG = data;
