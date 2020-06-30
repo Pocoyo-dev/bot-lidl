@@ -32,7 +32,7 @@ const fs = require("fs");
 
 
   msg.reply(
-    `Vous avez commandé **${log1Quantity}** de **${log1Item}** sous le pseudo **${log1Pseudo}** le **${log1Time}**`
+    `Vous avez commandé **${log1Quantity}** de **${log1Item}** sous le pseudo **${log1Pseudo}**`
   );
 }),
   function (err) {
