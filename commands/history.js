@@ -29,10 +29,7 @@ const fs = require("fs");
   )
     .then((res) => res.json())
     .then((json) => json.rows.pseudo);
-
-  
-
-
+  console.log(log1Item + log1Pseudo + log1Quantity + log1Time);
   msg.reply(
     `Vous avez commandé **${log1Quantity}** de **${log1Item}** sous le pseudo **${log1Pseudo}** le **${log1Time}**`
   );
