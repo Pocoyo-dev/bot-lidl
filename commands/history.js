@@ -25,11 +25,12 @@ module.exports.run = async (client, msg, args) => {
       const finalMessage = JSON.parse(json);
 
       msg.reply(
-        `Vous avez commandé **${finalMessage.QUANTITY}**de **${finalMessage.ITEM}** sous le pseudo **${finalMessage.PSEUDO}** le **${finalMessage.TIME}**`
+        `Vous avez commandé **${finalMessage.QUANTITY}** de **${finalMessage.ITEM}** sous le pseudo **${finalMessage.PSEUDO}** le **${finalMessage.Horodateur}**`
       );
     },
     function (err) {
       console.log(err);
+      msg.reply("Désolé mais un bug est survenu du côté du site ! Nous ne pouvons rien y faire, réessaie plus tard \:(");
     }
   );
 };

@@ -14,6 +14,8 @@
     "fs": "0.0.1-security",
     "googleapis": "^39.2.0",
     "node-fetch": "^2.6.0",
-    "sheetsu-node": "0.0.7"
+    "openurl": "^1.1.1",
+    "sheetsu-node": "0.0.7",
+    "url": "^0.11.0"
   }
 }
