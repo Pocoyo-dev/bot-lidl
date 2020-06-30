@@ -6,8 +6,6 @@ const fs = require("fs");
 (module.exports.run = async (client, msg, args) => {
   const discordUser = msg.author.id;
 
-  console.log(`${discordUser}`);
-  
   const log1Time = await fetch(
     `http://gsx2json.com/api?id=1LGEDEHkI0WBgzxtG7UidGO-m-gn9qNIPQk4o0jOVhLk&q=${discordUser}`
   )
@@ -32,6 +30,7 @@ const fs = require("fs");
     .then((res) => res.json())
     .then((json) => json.rows.pseudo);
   console.log(log1Item + log1Pseudo + log1Quantity + log1Time);
+  console.log(`${discordUser}`);
   msg.reply(
     `Vous avez commandé **${log1Quantity}** de **${log1Item}** sous le pseudo **${log1Pseudo}** le **${log1Time}**`
   );
