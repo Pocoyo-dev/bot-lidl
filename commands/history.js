@@ -20,10 +20,6 @@ module.exports.run = async (client, msg, args) => {
       msgData2 = msgData2.replace("]", " ");
       msgData2 = msgData2.replace("},{", ",");
       msgData2 = msgData2.replace("},{", ",");
-    
-
-      const json = `${msgData2}`;
-      const finalMessage = JSON.parse(json);
 
       msg.reply(
         `Vous avez commandé **${finalMessage.QUANTITY}** de **${finalMessage.ITEM}** sous le pseudo **${finalMessage.PSEUDO}** le **${finalMessage.Horodateur}**`
@@ -31,7 +27,9 @@ module.exports.run = async (client, msg, args) => {
     },
     function (err) {
       console.log(err);
-      msg.reply("Désolé mais un bug est survenu du côté du site ! Nous ne pouvons rien y faire, réessaie plus tard \:(");
+      msg.reply(
+        "Désolé mais un bug est survenu du côté du site ! Nous ne pouvons rien y faire, réessaie plus tard :("
+      );
     }
   );
 };
@@ -39,4 +37,3 @@ module.exports.run = async (client, msg, args) => {
 module.exports.help = {
   name: "history",
 };
-
