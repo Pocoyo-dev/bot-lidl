@@ -6,25 +6,19 @@ const fs = require("fs");
 (module.exports.run = async (client, msg, args) => {
   const discordUser = args[0];
 
-  const log1Time = await fetch(
-    `http://gsx2json.com/api?id=1LGEDEHkI0WBgzxtG7UidGO-m-gn9qNIPQk4o0jOVhLk&q=${discordUser}`
-  )
-    .then((res) => res.json())
-    .then((json) => json.columns.horodateur);
-
-  const log1Pseudo = await fetch(
+  const logPseudo = await fetch(
     `http://gsx2json.com/api?id=1LGEDEHkI0WBgzxtG7UidGO-m-gn9qNIPQk4o0jOVhLk&q=${discordUser}`
   )
     .then((res) => res.json())
     .then((json) => json.columns.pseudo);
 
-  const log1Quantity = await fetch(
+  const logQuantity = await fetch(
     `http://gsx2json.com/api?id=1LGEDEHkI0WBgzxtG7UidGO-m-gn9qNIPQk4o0jOVhLk&q=${discordUser}`
   )
     .then((res) => res.json())
     .then((json) => json.columns.quantité);
 
-  const log1Item = await fetch(
+  const logItem = await fetch(
     `http://gsx2json.com/api?id=1LGEDEHkI0WBgzxtG7UidGO-m-gn9qNIPQk4o0jOVhLk&q=${discordUser}`
   )
     .then((res) => res.json())
@@ -32,7 +26,7 @@ const fs = require("fs");
 
 
   msg.reply(
-    `Vous avez commandé **${log1Quantity}** de **${log1Item}** sous le pseudo **${log1Pseudo}**`
+    `Vous avez commandé **${logQuantity}** de **${logItem}** sous le pseudo **${logPseudo}**`
   );
 }),
   function (err) {
