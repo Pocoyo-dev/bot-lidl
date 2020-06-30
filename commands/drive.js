@@ -45,7 +45,7 @@ module.exports.run = async (client, msg, args) => {
         "Afin de confirmer votre commande, veuillez cliquer sur le lien ci-dessous",
       value: `[Lien de confirmation](https://docs.google.com/forms/d/e/1FAIpQLSePBqQqwbD42wd6A41ATDzKaxFfeTRWuHgkgWL3AvJkqmcP2Q/formResponse?usp=pp_url&entry.1818559927=${args[0]}&entry.86871255=${args[1]}&entry.46215118=${args[2]}&entry.740390018=${discordUser}&submit=Submit "Lien de confirmation")`,
     });
-  msg.reply(confirmationEmbed).then(function (message) {
+  msg.reply(confirmationEmbed).then(function (msg) {
     msg.react("👍");
   });
 };
