@@ -9,10 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@discordjs/opus": "^0.3.2",
     "axios": "^0.19.2",
     "discord.js": "^12.2.0",
-    "ffmpeg": "0.0.4",
     "fs": "0.0.1-security",
     "googleapis": "^39.2.0",
     "node-fetch": "^2.6.0",
