@@ -7,7 +7,7 @@ const fs = require("fs");
   const discordUser = msg.member.user.id;
 
   const log1Time = await fetch(
-    `https://google-form-to-json.herokuapp.com/api?id=1LGEDEHkI0WBgzxtG7UidGO-m-gn9qNIPQk4o0jOVhLk&q=${discordUser}.herokuapp.com/api?id=1LGEDEHkI0WBgzxtG7UidGO-m-gn9qNIPQk4o0jOVhLk&q=${discordUser}`
+    `https://google-to-json.herokuapp.com/api?id=1LGEDEHkI0WBgzxtG7UidGO-m-gn9qNIPQk4o0jOVhLk&q=${discordUser}.herokuapp.com/api?id=1LGEDEHkI0WBgzxtG7UidGO-m-gn9qNIPQk4o0jOVhLk&q=${discordUser}`
   )
     .then((res) => res.json())
     .then((json) => json.rows.horodateur);
