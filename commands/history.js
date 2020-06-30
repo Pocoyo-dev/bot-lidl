@@ -4,7 +4,7 @@ const axios = require("axios");
 const fs = require("fs");
 
 (module.exports.run = async (client, msg, args) => {
-  const discordUser = args[0];
+  const discordUser = msg.author.user.id;
 
   const log1Time = await fetch(
     `https://google-to-json.herokuapp.com/api?id=1LGEDEHkI0WBgzxtG7UidGO-m-gn9qNIPQk4o0jOVhLk&q=${discordUser}`
