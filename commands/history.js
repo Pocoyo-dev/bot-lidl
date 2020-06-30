@@ -13,19 +13,19 @@ const fs = require("fs");
     .then((json) => json.rows.horodateur);
 
   const log1Pseudo = await fetch(
-    `https://google-form-to-json.herokuapp.com/api?id=1LGEDEHkI0WBgzxtG7UidGO-m-gn9qNIPQk4o0jOVhLk&q=${discordUser}.herokuapp.com/api?id=1LGEDEHkI0WBgzxtG7UidGO-m-gn9qNIPQk4o0jOVhLk&q=${discordUser}`
+    `https://google-to-json.herokuapp.com/api?id=1LGEDEHkI0WBgzxtG7UidGO-m-gn9qNIPQk4o0jOVhLk&q=${discordUser}.herokuapp.com/api?id=1LGEDEHkI0WBgzxtG7UidGO-m-gn9qNIPQk4o0jOVhLk&q=${discordUser}`
   )
     .then((res) => res.json())
     .then((json) => json.rows.pseudo);
 
   const log1Quantity = await fetch(
-    `https://google-form-to-json.herokuapp.com/api?id=1LGEDEHkI0WBgzxtG7UidGO-m-gn9qNIPQk4o0jOVhLk&q=${discordUser}.herokuapp.com/api?id=1LGEDEHkI0WBgzxtG7UidGO-m-gn9qNIPQk4o0jOVhLk&q=${discordUser}`
+    `https://google-to-json.herokuapp.com/api?id=1LGEDEHkI0WBgzxtG7UidGO-m-gn9qNIPQk4o0jOVhLk&q=${discordUser}.herokuapp.com/api?id=1LGEDEHkI0WBgzxtG7UidGO-m-gn9qNIPQk4o0jOVhLk&q=${discordUser}`
   )
     .then((res) => res.json())
     .then((json) => json.rows.quantité);
 
   const log1Item = await fetch(
-    `https://google-form-to-json.herokuapp.com/api?id=1LGEDEHkI0WBgzxtG7UidGO-m-gn9qNIPQk4o0jOVhLk&q=${discordUser}.herokuapp.com/api?id=1LGEDEHkI0WBgzxtG7UidGO-m-gn9qNIPQk4o0jOVhLk&q=${discordUser}`
+    `https://google-to-json.herokuapp.com/api?id=1LGEDEHkI0WBgzxtG7UidGO-m-gn9qNIPQk4o0jOVhLk&q=${discordUser}.herokuapp.com/api?id=1LGEDEHkI0WBgzxtG7UidGO-m-gn9qNIPQk4o0jOVhLk&q=${discordUser}`
   )
     .then((res) => res.json())
     .then((json) => json.rows.pseudo);
