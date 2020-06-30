@@ -13,7 +13,6 @@ let year = date_ob.getFullYear();
 let hours = date_ob.getHours();
 let minutes = date_ob.getMinutes();
 let seconds = date_ob.getSeconds();
-console.log(year + "-" + month + "-" + date + " " + hours + ":" + minutes + ":" + seconds);
 
 fs.readdir("./commands/", (err, files) => {
   if (err) console.log(err);
@@ -31,7 +30,7 @@ fs.readdir("./commands/", (err, files) => {
 });
 
 client.on("ready", () => {
-  console.log(`Logged in as ${client.user.tag}! The time is` + year + "-" + month + "-" + date + " " + hours + ":" + minutes + ":" + seconds);
+  console.log(`Logged in as ${client.user.tag}! The time is ` + year + "-" + month + "-" + date + " " + hours + ":" + minutes + ":" + seconds);
 });
 
 const commandFiles = fs
