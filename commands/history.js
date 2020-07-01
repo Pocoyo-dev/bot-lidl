@@ -7,19 +7,19 @@ const fs = require("fs");
   const discordUser = args[0] || msg.author.id;
 
   const logPseudo = await fetch(
-    `http://gsx2json.com/api?id=1LGEDEHkI0WBgzxtG7UidGO-m-gn9qNIPQk4o0jOVhLk&q=${discordUser}`
+    `http://gsx2json.com/api?id=1HLmNeKCcd8IFIOBJcfYqH0SklF6YxN76JT8VsqqZWVo&q=${discordUser}`
   )
     .then((res) => res.json())
     .then((json) => json.columns.pseudo);
 
   const logQuantity = await fetch(
-    `http://gsx2json.com/api?id=1LGEDEHkI0WBgzxtG7UidGO-m-gn9qNIPQk4o0jOVhLk&q=${discordUser}`
+    `http://gsx2json.com/api?id=1HLmNeKCcd8IFIOBJcfYqH0SklF6YxN76JT8VsqqZWVo&q=${discordUser}`
   )
     .then((res) => res.json())
     .then((json) => json.columns.quantity);
 
   const logItem = await fetch(
-    `http://gsx2json.com/api?id=1LGEDEHkI0WBgzxtG7UidGO-m-gn9qNIPQk4o0jOVhLk&q=${discordUser}`
+    `http://gsx2json.com/api?id=1HLmNeKCcd8IFIOBJcfYqH0SklF6YxN76JT8VsqqZWVo&q=${discordUser}`
   )
     .then((res) => res.json())
     .then((json) => json.columns.item);
