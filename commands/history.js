@@ -35,7 +35,7 @@ const replaceWith = '\n';
 
 const logItemMSG = `${logItem}`.split(search).join(replaceWith);
 const logQuantityMSG = `${logQuantity}`.split(search).join(replaceWith);
-const logPseudoMSG = `${logItem}`.split(search).join(replaceWith);
+const logPseudoMSG = `${logPseudo}`.split(search).join(replaceWith);
 
   const historyEmbed = new Discord.MessageEmbed()
     .setColor("#0099ff")
