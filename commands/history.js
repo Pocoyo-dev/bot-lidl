@@ -4,7 +4,11 @@ const axios = require("axios");
 const fs = require("fs");
 
 (module.exports.run = async (client, msg, args) => {
-  const discordUser = args[0] || msg.author.id;
+  var discordUser = args[0];
+
+  if(!discordUser) {
+    msg.reply('Syntaxe : ~drive **[PSEUDO]** **[ITEM]** **[QUANTITÉ]**')
+  }
 
   const logPseudo = await fetch(
     `http://google-to-json.herokuapp.com/api?id=1HLmNeKCcd8IFIOBJcfYqH0SklF6YxN76JT8VsqqZWVo&q=${discordUser}`
@@ -24,10 +28,11 @@ const fs = require("fs");
     .then((res) => res.json())
     .then((json) => json.columns.item);
 
-  if (!logPseudo) {
+  if (logPseudo === "undefined") {
     msg.reply(
       "Il n'y a aucune commandes à ce nom ! Veuillez réessayer ! Si vous pensez que ceci est une erreur veuillez contacter un administrateur du serveur."
-    );
+    )
+    return;
   }
 
   const search = ",";
