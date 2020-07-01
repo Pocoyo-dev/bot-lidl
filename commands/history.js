@@ -51,7 +51,7 @@ const fs = require("fs");
       {
         name: "QUANTITÉ",
         value: `${logQuantityMSG}`,
-        inline: false,
+        inline: true,
       }
     )
     .setFooter("Fait avec amour par Pocoyo ;3");
