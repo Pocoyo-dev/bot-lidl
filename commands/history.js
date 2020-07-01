@@ -62,7 +62,7 @@ const fs = require("fs");
       "Fait avec amour par Pocoyo ;3"
     );
 
-  msg.channel.send(historyEmbed);
+  msg.reply(historyEmbed);
 }),
   function (err) {
     console.log(err);
