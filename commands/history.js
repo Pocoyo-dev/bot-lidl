@@ -4,7 +4,7 @@ const axios = require("axios");
 const fs = require("fs");
 
 (module.exports.run = async (client, msg, args) => {
-  const discordUser = args[0];
+  const discordUser = args[0] || msg.author.id;
 
   const logPseudo = await fetch(
     `http://gsx2json.com/api?id=1LGEDEHkI0WBgzxtG7UidGO-m-gn9qNIPQk4o0jOVhLk&q=${discordUser}`
