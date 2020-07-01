@@ -62,7 +62,7 @@ const fs = require("fs");
         inline: true,
       }
     )
-    .setFooter(
+    .setDescription(
       "**Merci de votre fidélité !**",
       "Fait avec amour par Pocoyo ;3"
     );
