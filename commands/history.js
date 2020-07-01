@@ -24,15 +24,17 @@ const fs = require("fs");
     .then((res) => res.json())
     .then((json) => json.columns.item);
 
-  if (logPseudo === "undefined") {
+  if (!logPseudo) {
     msg.reply(
       "Il n'y a aucune commandes à ce nom ! Veuillez réessayer ! Si vous pensez que ceci est une erreur veuillez contacter un administrateur du serveur."
     );
   }
 
-  var logItemMSG = logItem.replace(",", "/r/n");
-  var logQuantityMSG = logItem.replace(",", "/r/n");
-  var logPseudoMSG = logItem.replace(",", "/r/n");
+  
+
+  var logItemMSG = logItem.toString().replace(",", "/r/n");
+  var logQuantityMSG = logQuantity.toString().replace(",", "/r/n");
+  var logPseudoMSG = logPseudo.toString().replace(",", "/r/n");
 
   const historyEmbed = new Discord.MessageEmbed()
     .setColor("#0099ff")
