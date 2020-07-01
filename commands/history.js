@@ -30,8 +30,6 @@ const fs = require("fs");
     );
   }
 
-  
-
   var logItemMSG = logItem.toString().replace(",", "/r/n");
   var logQuantityMSG = logQuantity.toString().replace(",", "/r/n");
   var logPseudoMSG = logPseudo.toString().replace(",", "/r/n");
