@@ -56,7 +56,7 @@ const fs = require("fs");
     )
     .setFooter("Fait avec amour par Pocoyo ;3");
 
-  channel.send(historyEmbed);
+  msg.channel.send(historyEmbed);
 }),
   function (err) {
     console.log(err);
