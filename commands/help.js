@@ -14,7 +14,7 @@ module.exports.run = async (client, msg, args) => {
     )
     .setFooter("Fait avec amour par Pocoyo ;3");
 
-  channel.send(helpEmbed);
+  msg.channel.send(helpEmbed);
 };
 
 module.exports.help = {
