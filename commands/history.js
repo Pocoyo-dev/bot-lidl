@@ -6,8 +6,8 @@ const fs = require("fs");
 (module.exports.run = async (client, msg, args) => {
   var discordUser = args[0];
 
-  if(!discordUser) {
-    msg.reply('Syntaxe : ~drive **[PSEUDO]** **[ITEM]** **[QUANTITÉ]**')
+  if (!discordUser) {
+    msg.reply("Syntaxe : ~drive **[PSEUDO]** **[ITEM]** **[QUANTITÉ]**");
   }
 
   const logPseudo = await fetch(
@@ -31,7 +31,7 @@ const fs = require("fs");
   if (logPseudo === "undefined") {
     msg.reply(
       "Il n'y a aucune commandes à ce nom ! Veuillez réessayer ! Si vous pensez que ceci est une erreur veuillez contacter un administrateur du serveur."
-    )
+    );
     return;
   }
 
@@ -41,6 +41,12 @@ const fs = require("fs");
   const logItemMSG = `${logItem}`.split(search).join(replaceWith);
   const logQuantityMSG = `${logQuantity}`.split(search).join(replaceWith);
   const logPseudoMSG = `${logPseudo}`.split(search).join(replaceWith);
+
+  if (logPseudoMSG === undefined) {
+    msg.reply(
+      "Nous n'avons aucune commande qui correspond à l'argument que vous avez donné ! Si vous pensez que celui-ci est valide, veuillez réessayer plus tard, ou contacter un administrateur."
+    );
+  }
 
   const historyEmbed = new Discord.MessageEmbed()
     .setColor("#0099ff")
