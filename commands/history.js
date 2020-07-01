@@ -11,31 +11,32 @@ const fs = require("fs");
   )
     .then((res) => res.json())
     .then((json) => json.columns.pseudo);
-  let logPseudoMSG = logItem.replace(",", "r/n");
 
   const logQuantity = await fetch(
     `http://gsx2json.com/api?id=1LGEDEHkI0WBgzxtG7UidGO-m-gn9qNIPQk4o0jOVhLk&q=${discordUser}`
   )
     .then((res) => res.json())
     .then((json) => json.columns.quantity);
-  let logQuantityMSG = logItem.replace(",", "/r/n");
 
   const logItem = await fetch(
     `http://gsx2json.com/api?id=1LGEDEHkI0WBgzxtG7UidGO-m-gn9qNIPQk4o0jOVhLk&q=${discordUser}`
   )
     .then((res) => res.json())
     .then((json) => json.columns.item);
-  let logItemMSG = logItem.replace(",", "/r/n");
 
   if (logPseudo === "undefined") {
     msg.reply(
       "Il n'y a aucune commandes à ce nom ! Veuillez réessayer ! Si vous pensez que ceci est une erreur veuillez contacter un administrateur du serveur."
     );
   }
+
+  var logItemMSG = logItem.replace(",", "/r/n");
+  var logQuantityMSG = logItem.replace(",", "/r/n");
+  var logPseudoMSG = logItem.replace(",", "/r/n");
+
   const historyEmbed = new Discord.MessageEmbed()
     .setColor("#0099ff")
-    .setTitle("Page d<aide")
-    .setDescription("Some description here")
+    .setTitle("Page d'aide")
     .addFields(
       {
         name: "PSEUDO",
