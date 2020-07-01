@@ -30,12 +30,12 @@ const fs = require("fs");
     );
   }
 
-const search = ',';
-const replaceWith = '\n';
+  const search = ",";
+  const replaceWith = "\n";
 
-const logItemMSG = `${logItem}`.split(search).join(replaceWith);
-const logQuantityMSG = `${logQuantity}`.split(search).join(replaceWith);
-const logPseudoMSG = `${logPseudo}`.split(search).join(replaceWith);
+  const logItemMSG = `${logItem}`.split(search).join(replaceWith);
+  const logQuantityMSG = `${logQuantity}`.split(search).join(replaceWith);
+  const logPseudoMSG = `${logPseudo}`.split(search).join(replaceWith);
 
   const historyEmbed = new Discord.MessageEmbed()
     .setColor("#0099ff")
@@ -57,8 +57,10 @@ const logPseudoMSG = `${logPseudo}`.split(search).join(replaceWith);
         inline: true,
       }
     )
-    .setFooter("**Merci de votre fidélité !**" , "Fait avec amour par Pocoyo ;3");
-
+    .setFooter(
+      "**Merci de votre fidélité !**",
+      "Fait avec amour par Pocoyo ;3"
+    );
 
   msg.channel.send(historyEmbed);
 }),
