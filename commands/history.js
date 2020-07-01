@@ -36,7 +36,7 @@ const fs = require("fs");
 
   const historyEmbed = new Discord.MessageEmbed()
     .setColor("#0099ff")
-    .setTitle("Page d'aide")
+    .setTitle("Historique de vos commandes")
     .addFields(
       {
         name: "PSEUDO",
