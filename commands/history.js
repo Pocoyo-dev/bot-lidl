@@ -57,7 +57,8 @@ const logPseudoMSG = `${logPseudo}`.split(search).join(replaceWith);
         inline: true,
       }
     )
-    .setFooter("Fait avec amour par Pocoyo ;3");
+    .setFooter("**Merci de votre fidélité !**" , "Fait avec amour par Pocoyo ;3");
+
 
   msg.channel.send(historyEmbed);
 }),
