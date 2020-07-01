@@ -42,7 +42,7 @@ const fs = require("fs");
   const logQuantityMSG = `${logQuantity}`.split(search).join(replaceWith);
   const logPseudoMSG = `${logPseudo}`.split(search).join(replaceWith);
 
-  if (logPseudoMSG === undefined) {
+  if (logPseudoMSG === "undefined") {
     msg.reply(
       "Nous n'avons aucune commande qui correspond à l'argument que vous avez donné ! Si vous pensez que celui-ci est valide, veuillez réessayer plus tard, ou contacter un administrateur."
     );
