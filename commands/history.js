@@ -11,19 +11,19 @@ const fs = require("fs");
   }
 
   const logPseudo = await fetch(
-    `http://google-to-json.herokuapp.com/api?id=1HLmNeKCcd8IFIOBJcfYqH0SklF6YxN76JT8VsqqZWVo&q=${discordUser}`
+    `http://google-to-json.herokuapp.com/api?id=1LGEDEHkI0WBgzxtG7UidGO-m-gn9qNIPQk4o0jOVhLk&q=${discordUser}`
   )
     .then((res) => res.json())
     .then((json) => json.columns.pseudo);
 
   const logQuantity = await fetch(
-    `http://google-to-json.herokuapp.com/api?id=1HLmNeKCcd8IFIOBJcfYqH0SklF6YxN76JT8VsqqZWVo&q=${discordUser}`
+    `http://google-to-json.herokuapp.com/api?id=1LGEDEHkI0WBgzxtG7UidGO-m-gn9qNIPQk4o0jOVhLk&q=${discordUser}`
   )
     .then((res) => res.json())
     .then((json) => json.columns.quantity);
 
   const logItem = await fetch(
-    `http://google-to-json.herokuapp.com/api?id=1HLmNeKCcd8IFIOBJcfYqH0SklF6YxN76JT8VsqqZWVo&q=${discordUser}`
+    `http://google-to-json.herokuapp.com/api?id=1LGEDEHkI0WBgzxtG7UidGO-m-gn9qNIPQk4o0jOVhLk&q=${discordUser}`
   )
     .then((res) => res.json())
     .then((json) => json.columns.item);
