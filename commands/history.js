@@ -22,7 +22,7 @@ const fs = require("fs");
     `http://gsx2json.com/api?id=1LGEDEHkI0WBgzxtG7UidGO-m-gn9qNIPQk4o0jOVhLk&q=${discordUser}`
   )
     .then((res) => res.json())
-    .then((json) => json.columns.pseudo);
+    .then((json) => json.columns.item);
 
 
   msg.reply(
