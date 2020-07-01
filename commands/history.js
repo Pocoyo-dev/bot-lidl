@@ -30,9 +30,12 @@ const fs = require("fs");
     );
   }
 
-  var logItemMSG = logItem.toString().replaceAll(",", "\n");
-  var logQuantityMSG = logQuantity.toString().replaceAll(",", "\n");
-  var logPseudoMSG = logPseudo.toString().replaceAll(",", "\n");
+const search = ',';
+const replaceWith = '\n';
+
+const logItemMSG = `${logItem}`.split(search).join(replaceWith);
+const logQuantityMSG = `${logQuantity}`.split(search).join(replaceWith);
+const logPseudoMSG = `${logItem}`.split(search).join(replaceWith);
 
   const historyEmbed = new Discord.MessageEmbed()
     .setColor("#0099ff")
