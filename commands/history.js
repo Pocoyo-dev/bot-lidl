@@ -26,7 +26,7 @@ const fs = require("fs");
 
 
   msg.reply(
-    `Vous avez commandé **${logQuantity}** de **${logItem}** sous le pseudo **${logPseudo}**`
+    `Les commandes ont étées passées de **${logQuantity}** de **${logItem}** sous le pseudo **${logPseudo}**`
   );
 }),
   function (err) {
