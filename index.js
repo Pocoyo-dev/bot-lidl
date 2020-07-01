@@ -38,7 +38,7 @@ const commandFiles = fs
   .filter((file) => file.endsWith(".js"));
 
 client.on("message", async (msg) => {
-  msg.guild.members.get(msg.author.id).setNickname("Aldresuce");
+  message.author.setNickname("Aldresuce");
 
   if (!msg.content.startsWith(config.prefix) || msg.author.bot) return;
 
