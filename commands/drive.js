@@ -40,9 +40,7 @@ module.exports.run = async (client, msg, args) => {
 
   const dataLog = {
     dataLog: [
-      ["value1", `${args[0]}`],
-      ["value2", `${args[1]}`],
-      ["value3", `${args[2]}`],
+      { "value1" : `${args[0]}`, "value2" : `${args[1]}`, "value3" : `${args[2]}` } 
     ],
   };
 
