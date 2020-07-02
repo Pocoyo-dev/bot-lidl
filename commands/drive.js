@@ -38,32 +38,26 @@ module.exports.run = async (client, msg, args) => {
       console.error(err);
     });
 
-    var requestBody = `entry.1818559927=` + args[0] + `&entry.86871255=` + args[1] + `&entry.46215118=` + args[2] + `&entry.740390018=` + discordUser + `&fvv=1&draftResponse=%5Bnull%2Cnull%2C%22-3914117450383777137%22%5D%0D%0A&pageHistory=0&fbzx=-3914117450383777137`
+  const dataLog = {
+    dataLog: [
+      ["value1", `${args[0]}`],
+      ["value2", `${args[1]}`],
+      ["value3", `${args[2]}`],
+    ],
+  };
 
-    app.use(function(req, res, next) {
-      req.rawBody = requestBody;
-      req.setEncoding('utf8');
-    
-      req.on('data', function(chunk) { 
-        req.rawBody += chunk;
-      });
-    
-      req.on('end', function() {
-        next();
-      });
+  axios
+    .post(
+      "https://maker.ifttt.com/trigger/addLidlCommand/with/key/jTkvYSawr5etL9ngeCBnMrCMsoUCNEO3oIuEpBEbXmg",
+      dataLog
+    )
+    .then((res) => {
+      console.log(`Status: ${res.status}`);
+      console.log("Body: ", res.dataLog);
+    })
+    .catch((err) => {
+      console.error(err);
     });
-
-    request.post(
-      {url:'https://docs.google.com/forms/u/0/d/e/1FAIpQLSePBqQqwbD42wd6A41ATDzKaxFfeTRWuHgkgWL3AvJkqmcP2Q/formResponse',
-      body : req.rawBody,
-      headers: {'Content-Type': 'text/xml'}
-      },
-      function (error, response, body) {        
-          if (!error && response.statusCode == 200) {
-              console.log(statusCode)
-          }
-      }
-  );
 
   const confirmationEmbed = new Discord.MessageEmbed()
     .setColor("#0099ff")
