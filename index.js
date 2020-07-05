@@ -37,13 +37,13 @@ client.on("ready", () => {
 
   let loop = true;
 
-  setInterval(loopFunction(), 900000);
-
   function loopFunction() {
     fetch(`https://bot-alkawarp-aldi.herokuapp.com/`);
     fetch(`https://bot-lidl-modmail.herokuapp.com/`);
     fetch(`https://google-to-json.herokuapp.com/`);
   }
+
+  setInterval(loopFunction(), 900000);
 });
 
 const commandFiles = fs
