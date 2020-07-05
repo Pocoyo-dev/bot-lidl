@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 const fetch = require("node-fetch");
 const fs = require("fs");
-const config = require("./config.json")
+const config = require("./config.json");
 
 client.commands = new Discord.Collection();
 
@@ -14,7 +14,8 @@ let hours = date_ob.getHours();
 let minutes = date_ob.getMinutes();
 let seconds = date_ob.getSeconds();
 
-const time = year + "-" + month + "-" + date + " " + hours + ":" + minutes + ":" + seconds;
+const time =
+  year + "-" + month + "-" + date + " " + hours + ":" + minutes + ":" + seconds;
 
 fs.readdir("./commands/", (err, files) => {
   if (err) console.log(err);
@@ -33,6 +34,16 @@ fs.readdir("./commands/", (err, files) => {
 
 client.on("ready", () => {
   console.log(`Logged in as ${client.user.tag}! ${time}`);
+
+  let loop = true;
+
+  setInterval(loopFunction(), 900000);
+
+  function loopFunction() {
+    fetch(`https://bot-alkawarp-aldi.herokuapp.com/`);
+    fetch(`https://bot-lidl-modmail.herokuapp.com/`);
+    fetch(`https://google-to-json.herokuapp.com/`);
+  }
 });
 
 const commandFiles = fs
@@ -40,14 +51,13 @@ const commandFiles = fs
   .filter((file) => file.endsWith(".js"));
 
 client.on("message", async (msg) => {
-
   if (!msg.content.startsWith(config.prefix || "j!") || msg.author.bot) return;
 
-  let prefix = config.prefix
+  let prefix = config.prefix;
 
-  if(msg.guild.id === "724729553754259538" || "506205471762546708") {
-    let prefix = "j!"
-  };
+  if (msg.guild.id === "724729553754259538" || "506205471762546708") {
+    let prefix = "j!";
+  }
 
   let messageArray = msg.content.split(" ");
   let command = messageArray[0];
