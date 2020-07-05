@@ -43,7 +43,7 @@ client.on("ready", () => {
     fetch(`https://google-to-json.herokuapp.com/`);
   }
 
-  setInterval(loopFunction(), 900000);
+  setInterval(loopFunction, 900000);
 });
 
 const commandFiles = fs
