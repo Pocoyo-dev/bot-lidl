@@ -14,6 +14,8 @@ let hours = date_ob.getHours();
 let minutes = date_ob.getMinutes();
 let seconds = date_ob.getSeconds();
 
+const time = year + "-" + month + "-" + date + " " + hours + ":" + minutes + ":" + seconds;
+
 fs.readdir("./commands/", (err, files) => {
   if (err) console.log(err);
 
@@ -30,7 +32,7 @@ fs.readdir("./commands/", (err, files) => {
 });
 
 client.on("ready", () => {
-  console.log(`Logged in as ${client.user.tag}! The time is ` + year + "-" + month + "-" + date + " " + hours + ":" + minutes + ":" + seconds);
+  console.log(`Logged in as ${client.user.tag}! ${time}`);
 });
 
 const commandFiles = fs
@@ -39,15 +41,20 @@ const commandFiles = fs
 
 client.on("message", async (msg) => {
 
-  if (!msg.content.startsWith(config.prefix) || msg.author.bot) return;
+  if (!msg.content.startsWith(config.prefix || "j!") || msg.author.bot) return;
 
-  let prefix = config.prefix;
+  let prefix = config.prefix
+
+  if(msg.guild.id === "724729553754259538" || "506205471762546708") {
+    let prefix = "j!"
+  };
+
   let messageArray = msg.content.split(" ");
   let command = messageArray[0];
   let args = messageArray.slice(1);
 
   let commandFile = client.commands.get(command.slice(prefix.length));
-  if (commandFile) commandFile.run(client, msg, args);
+  if (commandFile) commandFile.run(client, msg, args, time);
 });
 
 client.login(process.env.TOKEN);

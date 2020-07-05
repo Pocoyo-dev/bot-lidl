@@ -38,8 +38,8 @@ module.exports.run = async (client, msg, args) => {
       console.error(err);
     });
 
-  const dataLog = {
-    dataLog: [
+  const data = {
+    data: [
       { "value1" : `${args[0]}`, "value2" : `${args[1]}`, "value3" : `${args[2]}` } 
     ],
   };
@@ -47,11 +47,11 @@ module.exports.run = async (client, msg, args) => {
   axios
     .post(
       "https://maker.ifttt.com/trigger/addLidlCommand/with/key/jTkvYSawr5etL9ngeCBnMrCMsoUCNEO3oIuEpBEbXmg",
-      dataLog
+      data
     )
     .then((res) => {
       console.log(`Status: ${res.status}`);
-      console.log("Body: ", res.dataLog);
+      console.log("Body: ", res.data);
     })
     .catch((err) => {
       console.error(err);

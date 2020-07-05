@@ -7,7 +7,7 @@ const sheetClient = sheetsu({
   address: "https://sheetsu.com/apis/v1.0su/0600bbb58ade",
 });
 
-module.exports.run = async (client, msg, args) => {
+module.exports.run = async (client, msg, args, time) => {
   const discordUserID = args[0];
 
   sheetClient.read({ search: { DISCORD: discordUserID } }).then(

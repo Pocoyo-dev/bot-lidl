@@ -3,7 +3,7 @@ const fetch = require("node-fetch");
 const axios = require("axios");
 const fs = require("fs");
 
-module.exports.run = async (client, msg, args) => {
+module.exports.run = async (client, msg, args, time) => {
   const helpEmbed = new Discord.MessageEmbed()
     .setColor("#0099ff")
     .setTitle("Page d<aide")
