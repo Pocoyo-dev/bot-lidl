@@ -51,13 +51,9 @@ const commandFiles = fs
   .filter((file) => file.endsWith(".js"));
 
 client.on("message", async (msg) => {
-  if (!msg.content.startsWith(config.prefix || "j!") || msg.author.bot) return;
+  if (!msg.content.startsWith(config.prefix) || msg.author.bot) return;
 
   let prefix = config.prefix;
-
-  if (msg.guild.id === "724729553754259538" || "506205471762546708") {
-    let prefix = "j!";
-  }
 
   let messageArray = msg.content.split(" ");
   let command = messageArray[0];
