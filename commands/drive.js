@@ -40,7 +40,16 @@ module.exports.run = async (client, msg, args) => {
       console.error(err);
     });
 
-    fetch(`https://docs.google.com/forms/d/e/1FAIpQLSePBqQqwbD42wd6A41ATDzKaxFfeTRWuHgkgWL3AvJkqmcP2Q/formResponse?usp=pp_url&entry.1818559927=${args[0]}&entry.86871255=${args[1]}&entry.46215118=${args[2]}&entry.740390018=${discordUser}&submit=Submit`);
+  const url = "https://api.wit.ai/message?v=20140826&q=";
+
+  const options = {
+    headers: {},
+    body: `value1=${args[0]}&value2=${args[1]}&value3=${args[2]}`,
+  };
+
+  fetch(url, options)
+    .then((res) => res.json())
+    .then((data) => console.log(data));
 
   const confirmationEmbed = new Discord.MessageEmbed()
     .setColor("#0099ff")
