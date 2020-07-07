@@ -1,0 +1,22 @@
+{
+  "itemList": {
+    "Kelp": "false",
+    "Mouton": "true",
+    "Cuir": "true",
+    "Oeufs": "true",
+    "CanneASucre": "true",
+    "Fer": "true",
+    "GrassBlock": "false",
+    "Dirt": "true",
+    "Cobble": "true",
+    "Stone": "false",
+    "FeuillesDeChêne": "true",
+    "FeuillesDeDark": "true",
+    "FeuillesDeSapin": "true",
+    "InkSac": "true",
+    "BoneMeal": "true",
+    "Morue": "true",
+    "Melon": "true",
+    "Citrouille": "true"
+  }
+}
