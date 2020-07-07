@@ -7,7 +7,6 @@ module.exports.run = async (client, msg, args, time) => {
   const helpEmbed = new Discord.MessageEmbed()
     .setColor("#0099ff")
     .setTitle("Page d'aide")
-    .setDescription("Some description here")
     .addFields(
       { name: "~drive **[PSEUDO]** **[ITEM]** **[QUANTITÉ]**", value: "Envoie une commande au **Lidl Drive**", inline: true },
       { name: "~history **[PSEUDO || DATE]**", value: "Affiche votre historique de commandes", inline: true }
