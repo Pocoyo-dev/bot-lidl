@@ -64,3 +64,7 @@ Creative Commons is not a party to this License, and makes no warranty whatsoeve
 Except for the limited purpose of indicating to the public that the Work is licensed under the CCPL, neither party will use the trademark "Creative Commons" or any related trademark or logo of Creative Commons without the prior written consent of Creative Commons. Any permitted use will be in compliance with Creative Commons' then-current trademark usage guidelines, as may be published on its website or otherwise made available upon request from time to time.
 
 Creative Commons may be contacted at https://creativecommons.org/.
+
+The license is registred at https://www.copyrighted.com/work/NStFWYcue0otukBI
+<a class="copyrighted-badge" title="Copyrighted.com Registered &amp; Protected" target="_blank" href="https://www.copyrighted.com/work/NStFWYcue0otukBI"><img alt="Copyrighted.com Registered &amp; Protected" border="0" width="125" height="75" srcset="https://static.copyrighted.com/badges/125x75/02_2x.png 2x" src="https://static.copyrighted.com/badges/125x75/02.png" /></a>
+
