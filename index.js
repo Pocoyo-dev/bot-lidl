@@ -51,7 +51,13 @@ const commandFiles = fs
   .filter((file) => file.endsWith(".js"));
 
 client.on("message", async (msg) => {
+
   if (!msg.content.startsWith(config.prefix) || msg.author.bot) return;
+
+  if (msg.author.id !== "370367253205745667") {
+    msg.channel.send("Le bot est en phase de test administrateur. Seul l'administrateur du bot peut effectuer des commandes");
+    return;
+  }
 
   let prefix = config.prefix;
 
