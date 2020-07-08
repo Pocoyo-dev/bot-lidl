@@ -22,6 +22,7 @@ Affiche la liste des items vendus
 # Remerciements
 
 Merci à :
+
   **MrHolly70** : Initiateur du projet
     Merci à lui pour ses bonnes idées et ses encouragements.
     
