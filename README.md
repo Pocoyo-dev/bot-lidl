@@ -26,7 +26,7 @@ Merci à :
   **MrHolly70** : Initiateur du projet
     Merci à lui pour ses bonnes idées et ses encouragements.
     
-  **Noltox#2020** : Aide
+  **Noltox** : Aide
     Merci à lui également pour ses idées magnifiques, et son aide afin de déceler les bugs.
     
   **Eclairou** : Aide
