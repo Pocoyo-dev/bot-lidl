@@ -66,5 +66,6 @@ Except for the limited purpose of indicating to the public that the Work is lice
 Creative Commons may be contacted at https://creativecommons.org/.
 
 The license is registred at https://www.copyrighted.com/work/NStFWYcue0otukBI
+
 <a class="copyrighted-badge" title="Copyrighted.com Registered &amp; Protected" target="_blank" href="https://www.copyrighted.com/work/NStFWYcue0otukBI"><img alt="Copyrighted.com Registered &amp; Protected" border="0" width="125" height="75" srcset="https://static.copyrighted.com/badges/125x75/02_2x.png 2x" src="https://static.copyrighted.com/badges/125x75/02.png" /></a>
 
