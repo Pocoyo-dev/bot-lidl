@@ -38,3 +38,8 @@ Merci à :
 # Bots Discord
  
 N'hésitez pas à me contacter sur DISCORD (pocoyo#5642) si vous avez besoin d'aide pour coder, ou avez besoin d'un bot discord.
+
+# License
+The license is registred at https://www.copyrighted.com/work/NStFWYcue0otukBI
+
+<a class="copyrighted-badge" title="Copyrighted.com Registered &amp; Protected" target="_blank" href="https://www.copyrighted.com/work/NStFWYcue0otukBI"><img alt="Copyrighted.com Registered &amp; Protected" border="0" width="125" height="75" srcset="https://static.copyrighted.com/badges/125x75/02_2x.png 2x" src="https://static.copyrighted.com/badges/125x75/02.png" /></a>
