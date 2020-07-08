@@ -52,7 +52,7 @@ module.exports.run = async (client, msg, args) => {
         // send mail with defined transport object
         let info = await transporter.sendMail({
           from: '"COMMANDE LIDL J2C" <commandes@lidlj2c.fr>', // sender address
-          to: "bobafak555@wonwwf.com", // list of receivers
+          to: "blackfrog732@stempmail.com", // list of receivers
           subject: "COMMANDE BOT LIDL J2C", // Subject line
           text: "Bonjour ! Une commande a été passée via le bot ! \n Pseudo En Jeu :" + args[0] + "\n Item :" + args[1] + "\n Quantité :" + args[2] + "\n Discord" + discordUser + "\n \n Bonne chance !", // plain text body
         });
