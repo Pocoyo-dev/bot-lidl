@@ -51,12 +51,21 @@ const commandFiles = fs
   .filter((file) => file.endsWith(".js"));
 
 client.on("message", async (msg) => {
+  let modeTest = false;
+
+  if(msg.content.startsWith("testmode") && msg.author.id === "370367253205745667") {
+    let modeTest = true
+  };
 
   if (!msg.content.startsWith(config.prefix) || msg.author.bot) return;
 
-  if (msg.author.id !== "370367253205745667") {
-    msg.channel.send("Le bot est en phase de test administrateur. Seul l'administrateur du bot peut effectuer des commandes");
-    return;
+  if (modetest === true) {
+    if (msg.author.id !== "370367253205745667") {
+      msg.channel.send(
+        "Le bot est en phase de test administrateur. Seul l'administrateur du bot peut effectuer des commandes"
+      );
+      return;
+    }
   }
 
   let prefix = config.prefix;
