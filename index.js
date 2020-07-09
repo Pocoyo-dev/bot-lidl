@@ -34,16 +34,6 @@ fs.readdir("./commands/", (err, files) => {
 
 client.on("ready", () => {
   console.log(`Logged in as ${client.user.tag}! ${time}`);
-
-  let loop = true;
-
-  function loopFunction() {
-    fetch(`https://bot-alkawarp-aldi.herokuapp.com/`);
-    fetch(`https://bot-lidl-modmail.herokuapp.com/`);
-    fetch(`https://google-to-json.herokuapp.com/`);
-  }
-
-  setInterval(loopFunction, 900000);
 });
 
 const commandFiles = fs
