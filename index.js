@@ -3,9 +3,11 @@ const client = new Discord.Client();
 const fetch = require("node-fetch");
 const fs = require("fs");
 const config = require("./config.json");
+const keepAlive = require('./server.js');
 
 client.commands = new Discord.Collection();
 
+// DATE VARIABLE
 let date_ob = new Date();
 let date = ("0" + date_ob.getDate()).slice(-2);
 let month = ("0" + (date_ob.getMonth() + 1)).slice(-2);
@@ -33,6 +35,7 @@ fs.readdir("./commands/", (err, files) => {
 });
 
 client.on("ready", () => {
+  client.user.setPresence({ activity: { name: 'Version 1.22 ! ' }, status: 'idle' });
   console.log(`Logged in as ${client.user.tag}! ${time}`);
 });
 
@@ -67,5 +70,7 @@ client.on("message", async (msg) => {
   let commandFile = client.commands.get(command.slice(prefix.length));
   if (commandFile) commandFile.run(client, msg, args, time);
 });
+
+keepAlive();
 
 client.login(process.env.TOKEN);

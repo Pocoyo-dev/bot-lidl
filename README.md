@@ -6,7 +6,7 @@ Celle-ci [L'application]  sert à servir la communauté DISCORD du LIDL J2C, une
 
 Ce bot est destiné à une utilisation privée et supervisée de la part de l'auteur de ce travail.
 
-Veuillez vous référer au fichier [License.md](https://github.com/PocoyoBots/bot-lidl/blob/master/LICENSE.md)
+Veuillez vous référer au fichier [License.md](https://repl.it/@PocoyoBots/bot-lidl#LICENSE.md)
 
 # Commandes
 

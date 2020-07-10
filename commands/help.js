@@ -8,8 +8,9 @@ module.exports.run = async (client, msg, args, time) => {
     .setColor("#0099ff")
     .setTitle("Page d'aide")
     .addFields(
-      { name: "~drive **[PSEUDO]** **[ITEM]** **[QUANTITÉ]**", value: "Envoie une commande au **Lidl Drive**", inline: true },
-      { name: "~history **[PSEUDO || DATE]**", value: "Affiche votre historique de commandes", inline: true }
+      { name: "lidl!drive **[PSEUDO]** **[ITEM]** **[QUANTITÉ]**", value: "Envoie une commande au **Lidl Drive**", inline: true },
+      { name: "lidl!history **[PSEUDO || DATE]**", value: "Affiche votre historique de commandes", inline: true },
+      { name: "lidl!item", value: "Affiche la liste d'items vendus", inline: false }
     )
     .setFooter("Fait avec amour par Pocoyo ;3");
 
