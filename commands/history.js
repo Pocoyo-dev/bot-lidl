@@ -7,23 +7,23 @@ const fs = require("fs");
   var discordUser = args[0];
 
   if (!discordUser) {
-    msg.reply("Syntaxe : ~drive **[PSEUDO]** **[ITEM]** **[QUANTITÉ]**");
+    msg.reply("Syntaxe : ~history **[PSEUDO || DATE]**");
   }
 
   const logPseudo = await fetch(
-    `http://google-to-json.herokuapp.com/api?id=1LGEDEHkI0WBgzxtG7UidGO-m-gn9qNIPQk4o0jOVhLk&q=${discordUser}`
+    `https://spreadsheet-to-json.pocoyobots.repl.co/api?id=1LGEDEHkI0WBgzxtG7UidGO-m-gn9qNIPQk4o0jOVhLk&q=${discordUser}`
   )
     .then((res) => res.json())
     .then((json) => json.columns.pseudo);
 
   const logQuantity = await fetch(
-    `http://google-to-json.herokuapp.com/api?id=1LGEDEHkI0WBgzxtG7UidGO-m-gn9qNIPQk4o0jOVhLk&q=${discordUser}`
+    `https://spreadsheet-to-json.pocoyobots.repl.co/api?id=1LGEDEHkI0WBgzxtG7UidGO-m-gn9qNIPQk4o0jOVhLk&q=${discordUser}`
   )
     .then((res) => res.json())
     .then((json) => json.columns.quantity);
 
   const logItem = await fetch(
-    `http://google-to-json.herokuapp.com/api?id=1LGEDEHkI0WBgzxtG7UidGO-m-gn9qNIPQk4o0jOVhLk&q=${discordUser}`
+    `https://spreadsheet-to-json.pocoyobots.repl.co/api?id=1LGEDEHkI0WBgzxtG7UidGO-m-gn9qNIPQk4o0jOVhLk&q=${discordUser}`
   )
     .then((res) => res.json())
     .then((json) => json.columns.item);

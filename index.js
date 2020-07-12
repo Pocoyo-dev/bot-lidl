@@ -35,7 +35,7 @@ fs.readdir("./commands/", (err, files) => {
 });
 
 client.on("ready", () => {
-  client.user.setPresence({ activity: { name: 'Version 1.22 ! ' }, status: 'idle' });
+  client.user.setPresence({ activity: { name: 'Version 1.30 ! ' }, status: 'online' });
   console.log(`Logged in as ${client.user.tag}! ${time}`);
 });
 

@@ -1,20 +1,91 @@
 {
-    "kelp": "false",
-    "mouton": "true",
-    "cuir": "true",
-    "oeuf": "true",
-    "canneasucre": "true",
-    "fer": "true",
-    "grassblock": "false",
-    "dirt": "true",
-    "cobblestone": "true",
-    "stone": "false",
-    "oakleaves": "true",
-    "darkoakleaves": "true",
-    "spruceleaves": "true",
-    "inksac": "true",
-    "bonemeal": "true",
-    "morue": "true",
-    "melon": "true",
-    "citrouille": "true"
+   "kelp":{
+      "available":"false",
+      "price":"1"
+   
+},
+   "mouton":{
+      "available":"1",
+      "price":"priceNumber"
+   
+},
+   "cuir":{
+      "available":"1",
+      "price":"priceNumber"
+   
+},
+   "oeuf":{
+      "available":"0.25",
+      "price":"priceNumber"
+   
+},
+   "canneasucre":{
+      "available":"true",
+      "price":"priceNumber"
+   
+},
+   "fer":{
+      "available":"true",
+      "price":"2"
+   
+},
+   "grassblock":{
+      "available":"false",
+      "price":"2"
+   
+},
+   "dirt":{
+      "available":"true",
+      "price":"1"
+   
+},
+   "cobblestone":{
+      "available":"true",
+      "price":"2"
+   
+},
+   "stone":{
+      "available":"false",
+      "price":"2"
+   
+},
+   "oakleaves":{
+      "available":"true",
+      "price":"2"
+   
+},
+   "darkoakleaves":{
+      "available":"true",
+      "price":"2"
+   
+},
+   "spruceleaves":{
+      "available":"true",
+      "price":"2"
+   
+},
+   "inksac":{
+      "available":"true",
+      "price":"1"
+   
+},
+   "bonemeal":{
+      "available":"true",
+      "price":"1"
+   
+},
+   "morue":{
+      "available":"true",
+      "price":"2"
+   
+},
+   "melon":{
+      "available":"true",
+      "price":"1"
+   
+},
+   "citrouille":{
+      "available":"true",
+      "price":"2"
+}
 }
