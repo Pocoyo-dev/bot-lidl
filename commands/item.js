@@ -1,8 +1,4 @@
 const Discord = require("discord.js");
-const fetch = require("node-fetch");
-const axios = require("axios");
-const fs = require("fs");
-
 module.exports.run = async (client, msg, args, time) => {
   const itemListBlocs =
     "GrassBlock \n Dirt \n Cobble \n Stone \n Oakleaves \n DarkOakLeaves \n SpruceLeaves";
@@ -22,8 +18,11 @@ module.exports.run = async (client, msg, args, time) => {
         {name: "MINERAI",value: `${itemListMinerais}`, inline: true},
         {name: "AUTRE",value: `${itemListOther}`, inline: true}
         )
-
-  msg.reply(itemListEmbed);
+    .setDescription(
+      "**Merci de votre fidélité !**",
+    )
+    .setFooter("Fait avec amour par Pocoyo")
+  msg.channel.send(itemListEmbed);
 };
 
 module.exports.help = {

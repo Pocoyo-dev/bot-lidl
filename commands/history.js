@@ -8,6 +8,7 @@ const fs = require("fs");
 
   if (!discordUser) {
     msg.reply("Syntaxe : ~history **[PSEUDO || DATE]**");
+    return;
   }
 
   const logPseudo = await fetch(
@@ -46,6 +47,7 @@ const fs = require("fs");
     msg.reply(
       "Nous n'avons aucune commande qui correspond à l'argument que vous avez donné ! Si vous pensez que celui-ci est valide, veuillez réessayer plus tard, ou contacter un administrateur."
     );
+    return;
   }
 
   const historyEmbed = new Discord.MessageEmbed()
@@ -70,17 +72,11 @@ const fs = require("fs");
     )
     .setDescription(
       "**Merci de votre fidélité !**",
-      "Fait avec amour par Pocoyo ;3"
-    );
+    )
+    .setFooter("Fait avec amour par Pocoyo")
 
-  msg.reply(historyEmbed);
+  msg.channel.send(historyEmbed);
 }),
-  function (err) {
-    console.log(err);
-    msg.reply(
-      "Désolé mais un bug est survenu du côté du site ! Nous ne pouvons rien y faire, réessaie plus tard :("
-    );
-  };
 
 module.exports.help = {
   name: "history",

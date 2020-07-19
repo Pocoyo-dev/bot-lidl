@@ -1,27 +1,29 @@
 const Discord = require("discord.js");
-const fetch = require("node-fetch");
 const axios = require("axios");
-const fs = require("fs");
-const request = require("request");
 const itemList = require("../itemlist.json");
-const nodemailer = require("nodemailer");
 
 module.exports.run = async (client, msg, args) => {
-  if (!args[0]) {
+
+  // SYNTAXE
+
+ try {
+     if (!args[0]) {
     msg.reply(
-      "Syntaxe : `~drive (Pseudo en jeu) (Item commandé) (Quantité en stacks)`"
+      "Syntaxe : `lidl!drive (Pseudo en jeu) (Item commandé) (Quantité en stacks)`"
     );
     return;
   }
 
-  let itemVerification = itemList[args[1]].available;
+  // DROGUES
 
-  if (!itemVerification) {
-    msg.reply(
-      "Cet item n'est pas en vente au LIDL J2C. Veuillez vous référer à la liste d'items vendu en faisant **lidl!list**"
-    );
+  if (args[1] === "ghb" || args[1] === "lsd" || args[1] === "cannabis" || args[1] === "beuh") {
+    msg.channel.send("Oké j'appelle la police");
     return;
   }
+
+  // VÉRIFICATION
+
+  const itemVerification = itemList[args[1]].available;
 
   if (itemVerification === "false") {
     msg.reply("Cet item est actuellement hors-stock. Désolé !");
@@ -29,6 +31,11 @@ module.exports.run = async (client, msg, args) => {
   }
 
   if (itemVerification === "true") {
+
+  // SI ITEM EN STOCK EXÉCUTER CODE
+
+  // PRIX
+
     let priceStack = itemList[args[1]].price;
 
     console.log(priceStack);
@@ -43,6 +50,8 @@ module.exports.run = async (client, msg, args) => {
     } else {
       var finalPrice = totalPriceRaw + "em";
     }
+
+    // POST API EMAIL
 
     const discordUser = msg.author.id;
     const data = {
@@ -71,14 +80,22 @@ module.exports.run = async (client, msg, args) => {
         console.error(err);
       });
 
+    // ENVOYER MESSAGE COMMANDE PUBLIC 
+
     const confirmationEmbed = new Discord.MessageEmbed()
       .setColor("#0099ff")
       .setTitle(
         "Votre commande est passée ! Allez voir vos MP pour confirmer celle-ci !"
-      );
-    msg.reply(confirmationEmbed).then(function (msg) {
+      )
+      .setDescription(
+        "**Merci de votre fidélité !**",
+      )
+      .setFooter("Fait avec amour par Pocoyo")
+    msg.reply(confirmationEmbed).then(function(msg) {
       msg.react("👍");
     });
+
+    //ENVOYER MESSAGE COMMANDE PRIVÉ
 
     const informationEmbedDM = new Discord.MessageEmbed()
       .setColor("#0099ff")
@@ -92,10 +109,21 @@ module.exports.run = async (client, msg, args) => {
           name: "Informations sur la commande",
           value: `Pseudo : ${args[0]} \n Item : ${args[1]} \n Quantité : ${args[2]} stacks \n Prix : ${finalPrice}`,
         }
-      );
+      )
+      .setDescription(
+        "**Merci de votre fidélité !**",
+      )
+      .setFooter("Fait avec amour par Pocoyo")
     msg.author.send(informationEmbedDM);
   }
+
+  // CATCH ERROR
+
+ } catch(e) {
+   msg.channel.send("Cet item n'est pas en vente au LIDL J2C. Veuillez vous référer à la liste d'items vendu en faisant **lidl!item**");
+ }
 };
+
 
 module.exports.help = {
   name: "drive",

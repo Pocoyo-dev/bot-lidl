@@ -5,23 +5,18 @@
    
 },
    "mouton":{
-      "available":"1",
-      "price":"priceNumber"
+      "available":"true",
+      "price":"1"
    
 },
    "cuir":{
-      "available":"1",
-      "price":"priceNumber"
+      "available":"true",
+      "price":"1"
    
 },
    "oeuf":{
-      "available":"0.25",
-      "price":"priceNumber"
-   
-},
-   "canneasucre":{
       "available":"true",
-      "price":"priceNumber"
+      "price":"0.25"
    
 },
    "fer":{
